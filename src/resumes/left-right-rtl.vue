@@ -71,9 +71,11 @@
 
 <script>
 import Vue from 'vue';
-import { getVueOptions } from './options';
 const name = 'left-right-rtl';
-export default Vue.component(name, getVueOptions(name));
+export default Vue.component(name, {
+    props: ['person', 'lang', 'contactLinks'],
+    name: name
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

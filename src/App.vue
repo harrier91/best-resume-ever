@@ -11,6 +11,8 @@ export default {
 </script>
 
 <style>
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+
 /* Add new fonts here */
 @import '../node_modules/roboto-fontface/css/roboto/roboto-fontface.css';
 @import '../node_modules/font-awesome/css/font-awesome.css';

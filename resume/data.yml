@@ -29,6 +29,11 @@ experience:
   timeperiod: March 2014 - December 2014
   description: Making coffee and baking cookies.
 
+- company: Company D
+  position: Intern
+  timeperiod: March 2011 - December 2013
+  description: Dancing in the dark.
+
 education:
 - degree: Master of Arts
   timeperiod: March 2012 - December 2013
@@ -38,6 +43,10 @@ education:
 - degree: Bachelor of Science
   timeperiod: March 2009 - December 2011
   description: Major in Engineering, University B, Los Angeles, USA.
+
+- degree: High School Diploma
+  timeperiod: March 2003 - December 2008
+  description: High School H, Los Angeles, USA.
 
 # skill level goes 0 to 100
 skills:
