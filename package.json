@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
-    "font-awesome": "4.7.0",
+    "@fortawesome/fontawesome-free": "^5.7.2",
     "html2canvas": "^1.0.0-alpha.12",
     "js-yaml": "3.12.0",
     "jspdf": "^1.5.3",
@@ -95,7 +95,7 @@
     "semver": "5.5.1",
     "shelljs": "0.8.2",
     "testcafe": "0.22.0",
-    "testcafe-hammerhead": "14.2.7",
+    "testcafe-hammerhead": "^14.5.1",
     "url-exists": "1.0.3",
     "url-loader": "1.1.1",
     "vue-loader": "15.4.2",

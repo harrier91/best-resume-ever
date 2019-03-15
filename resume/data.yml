@@ -1,101 +1,131 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Andrea
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Magazzini
+about: |
+    Dynamic, open minded, fast learner and always ready to change: I consider these skills to be my strenghts.
+    I always try to adapt myself because I think nothing is static in this World.
+
+    I have a BSc in Electronic Engineering, an European MSc double degree in Advanced Robotics.
+    I studied in 3 different Universities in Italy, Norway and France and I currently work in Switzerland as Software Engineer.
+
+    Being social and get in touch with new people, from different cultures, in order to share knowledge and ideas, has always brought me inspiration and new ways of thinking.
+
+    Pantarei, everything flows
+position: Software Engineer
 
 birth:
-  year: 1990
-  location: New York
+  year: 1991
+  location: Genoa, Italy
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: ti&m AG
+  position: Software Engineer
+  timeperiod: Jun 17 - now
+  description: |
+      Development of Web Portals, Websites, Mobile Apps and Collaborative Platforms in an Agile SCRUM environment.
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: SIX Payment Services
+  position: Software Engineer (External)
+  timeperiod: Feb 18 - Jul 18
+  description: |
+      Working as external for ti&m, I could improve my skills in Java Testing, NonStopSQL Database and COBOL.
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+volunteering:
+- association: Precious Plastic Zurich
+  position: Staff Member
+  timeperiod: Oct 18 - now
+  description: |
+      I am an initiator of this Project that aim to sensibilize people about the problem of plastic recycling.
+      I helped in building a Plastic Shredder and an Injector, designing molds and organizing meetings.
 
-- company: Company D
-  position: Intern
-  timeperiod: March 2011 - December 2013
-  description: Dancing in the dark.
+- association: ESN Genova
+  position: Board Member
+  timeperiod: Jun 13 - Jun 16
+  description: |
+      Local section of the biggest european students network that plans activities for erasmus students. My tasks were to coordinate the voluteers, organize events, manage the finances and keep the contact with the sponsors
+
+- association: AEGEE-Genova
+  position: Board Member
+  timeperiod: Oct 13 - Jun 16
+  description: |
+      The Association is part of a Network that promotes youth exchanges in Europe in order to create collaboration and awareness about different themes. I helped organizing events, managing the finances and restyling the website.
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: European Master II (MSc)
+  timeperiod: Sep 15 - Oct 16
+  university: University of Genoa, Italy
+  major: Advanced Robotics Engineering
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: European Master I (MSc)
+  timeperiod: Sep 14 - Jul 15
+  university: Ecole Centrale de Nantes, France
+  major: Advanced Robotics Engineering
 
-- degree: High School Diploma
-  timeperiod: March 2003 - December 2008
-  description: High School H, Los Angeles, USA.
+- degree: Bachelor (BSc)
+  timeperiod: Sep 10 - Oct 14
+  university: University of Genoa, Italy
+  major: Electronic Engineering
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
+- name: Adaptability
+  level: 100
+- name: Collaboration
   level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+- name: Creativity
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: Persuasion
+  level: 65
+
+# languages level goes 0 to 6
+languages:
+    - name: Italian
+      level: 6
+    - name: English
+      level: 5
+    - name: French
+      level: 4
+    - name: Spanish
+      level: 4
+    - name: German
+      level: 3
+
+knowledge: |
+    Technologies: JavaScript, TypeScript, React, Angular, Docker, Java, Python, Kotlin, Vue.js, Blockchain, COBOL
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Clientis Portal
+  technologies: React with TypeScript, Angular
+  description: Client Side development of a Web Portal and its backoffice (Inbox, Document Storage)
+- name: ICO Mobile App
+  technologies: React Native, Android Studio, Blockchain
+  description: Development of the Video Call part inside the App and the contract in Solidity for the Ethereum Blockchain
+- name: SmartConnect
+  technologies: Jive, JavaScript, HTML5
+  description: Implementation of new functionalities for a Collaborative Platform
+- name: Auto-tuning of an Humanoid Model
+  technologies: EyesWeb, C++
+  description: Thesis project where I implemented a block to auto-tune a Spring-Mass-Dumper Humanoid Model using real dancing movements recorded by a Motion Capture System
+
 
 hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
+- name: Transsiberian Dream 2018
+  iconClass: fa fa-train
 
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
+- name: Camino de Santiago 2017
+  iconClass: fa fa-hiking
 
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Basket, Volley, Football
+  iconClass: fa fa-running
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: andreamaga4@gmail.com
+  phone: 0041 76 372 14 44
+  city: Zurich, Switzerland
+  nationality: Italian Passport
+  github: harrier91
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
 lang: en
 `

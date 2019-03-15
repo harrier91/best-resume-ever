@@ -1,0 +1,47 @@
+.page-wrapper {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    box-sizing: border-box;
+}
+.resume {
+    height: 100%;
+    width: 100%;
+}
+.page {
+    background: white;
+    position: absolute;
+    margin: 0 auto 0 0;
+    width: 21cm;
+    max-height: 100%;
+    display: block;
+    overflow: hidden scroll;
+}
+.section-edit {
+    margin-left: 21cm;
+    width: calc(100% - 21cm);
+    position: absolute;
+    max-height: 100%;
+    overflow: hidden scroll;
+    padding: 1rem;
+}
+
+@media print {
+    @page {
+        margin: 1cm 0;
+        size: A4;
+    }
+    @page :first {
+        margin: 0 0 0.5cm 0;
+    }
+    .section-edit {
+        display: none;
+    }
+    .page {
+        overflow: visible;
+    }
+    .page::-webkit-scrollbar {
+        display: none;
+    }
+}

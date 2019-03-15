@@ -1,18 +1,16 @@
 <template>
     <div class="page-wrapper">
+        <div class="page" :id="$route.params.resumeid">
+            <component
+                :is="$route.params.resumeid"
+                :person="person"
+                :lang="lang"
+                :contactLinks="contactLinks"
+            ></component>
+        </div>
         <div class="section-edit">
             <button v-on:click="print">Print Resume</button>
             <FormCreator :object="person"></FormCreator>
-        </div>
-        <div class="page" :id="$route.params.resumeid">
-            <div class="page-inner">
-                <component
-                    :is="$route.params.resumeid"
-                    :person="person"
-                    :lang="lang"
-                    :contactLinks="contactLinks"
-                ></component>
-            </div>
         </div>
     </div>
 </template>
