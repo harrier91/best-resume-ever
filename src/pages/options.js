@@ -6,6 +6,13 @@ import {
     terms
 } from '../terms';
 
+function getVueData () {
+    return {
+        person: yaml.load(PERSON),
+        terms: terms,
+    };
+}
+
 // Called by templates to decrease redundancy
 function getVueOptions (name) {
     const opt = {
