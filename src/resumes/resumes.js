@@ -3,7 +3,7 @@ import './material-dark.vue';
 import './left-right.vue';
 import './oblique.vue';
 import './side-bar.vue';
-import './purple.vue';
+import './ti8m.vue';
 import './side-bar-rtl.vue';
 import './left-right-rtl.vue';
 import './creative.vue';

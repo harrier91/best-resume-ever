@@ -1,131 +1,148 @@
-/* #*/ export const PERSON = `
-name:
-  first: Andrea
-  middle:
-  last: Magazzini
-about: |
-    Dynamic, open minded, fast learner and always ready to change: I consider these skills to be my strenghts.
-    I always try to adapt myself because I think nothing is static in this World.
+    /* #*/ export const PERSON = `
+    name:
+        first: Andrea
+        middle:
+        last: Magazzini
+    about: |
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-    I have a BSc in Electronic Engineering, an European MSc double degree in Advanced Robotics.
-    I studied in 3 different Universities in Italy, Norway and France and I currently work in Switzerland as Software Engineer.
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    position: Software Engineer
 
-    Being social and get in touch with new people, from different cultures, in order to share knowledge and ideas, has always brought me inspiration and new ways of thinking.
+    birth:
+        date: 16 February 1991
+        location: Genoa, Italy
 
-    Pantarei, everything flows
-position: Software Engineer
+    competencies:
+        - name: Agile Requirements Engineering
+        - name: Front-End Development
 
-birth:
-  year: 1991
-  location: Genoa, Italy
+    experience:
+        - company: Company A
+          location: Zurich, Switzerland
+          position: Software Engineer
+          timeperiod: Jun 17 - now
+          description: |
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
-experience:
-- company: ti&m AG
-  position: Software Engineer
-  timeperiod: Jun 17 - now
-  description: |
-      Development of Web Portals, Websites, Mobile Apps and Collaborative Platforms in an Agile SCRUM environment.
+        - company: Company B
+          location: Milan, Italy
+          position: Software Engineer
+          timeperiod: Nov 16 - Mar 17
+          description: |
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
-- company: SIX Payment Services
-  position: Software Engineer (External)
-  timeperiod: Feb 18 - Jul 18
-  description: |
-      Working as external for ti&m, I could improve my skills in Java Testing, NonStopSQL Database and COBOL.
+    volunteering:
+        - association: Association A
+          position: Staff Member
+          timeperiod: Oct 18 - now
+          description: |
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
-volunteering:
-- association: Precious Plastic Zurich
-  position: Staff Member
-  timeperiod: Oct 18 - now
-  description: |
-      I am an initiator of this Project that aim to sensibilize people about the problem of plastic recycling.
-      I helped in building a Plastic Shredder and an Injector, designing molds and organizing meetings.
+    education:
+        - degree: Master
+          timeperiod: Sep 14 - Oct 16
+          university: University of Genoa
+          major: Software Engineering
 
-- association: ESN Genova
-  position: Board Member
-  timeperiod: Jun 13 - Jun 16
-  description: |
-      Local section of the biggest european students network that plans activities for erasmus students. My tasks were to coordinate the voluteers, organize events, manage the finances and keep the contact with the sponsors
+        - degree: Bachelor
+          timeperiod: Sep 10 - Oct 14
+          university: University of Genoa
+          major: Electronic Engineering
 
-- association: AEGEE-Genova
-  position: Board Member
-  timeperiod: Oct 13 - Jun 16
-  description: |
-      The Association is part of a Network that promotes youth exchanges in Europe in order to create collaboration and awareness about different themes. I helped organizing events, managing the finances and restyling the website.
+    training:
+        - name: Digital Garage
+          timeperiod: Jan 17 - Mar 17
+          location: Milan, Italy
+          description: |
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
-education:
-- degree: European Master II (MSc)
-  timeperiod: Sep 15 - Oct 16
-  university: University of Genoa, Italy
-  major: Advanced Robotics Engineering
+    # skill level goes 0 to 100
+    skills:
+        - name: Adaptability
+          level: 100
+        - name: Collaboration
+          level: 95
+        - name: Creativity
+          level: 80
+        - name: Persuasion
+          level: 65
 
-- degree: European Master I (MSc)
-  timeperiod: Sep 14 - Jul 15
-  university: Ecole Centrale de Nantes, France
-  major: Advanced Robotics Engineering
+    # languages level goes 0 to 6
+    languages:
+        - name: Italian
+          level: 6
+        - name: English
+          level: 5
 
-- degree: Bachelor (BSc)
-  timeperiod: Sep 10 - Oct 14
-  university: University of Genoa, Italy
-  major: Electronic Engineering
+    knowledge:
+        - title: Technologies
+          description: |-
+              Programming Languages: JavaScript, TypeScript, Java, Python, Kotlin
+              Frameworks: Angular, React
+              Others: HTML5, CSS3, XML
+        - title: Area of Expertise
+          description: |-
+              Web Applications
+              Mobile Applications
+              Internet of Things
+              User Experience
+        - title: Processes and Methodologies
+          description: Agile Scrum
+        - title: User Know-How
+          description: Git, Jira
+        - title: Operating Systems
+          description: Windows, Linux, Android
 
-# skill level goes 0 to 100
-skills:
-- name: Adaptability
-  level: 100
-- name: Collaboration
-  level: 95
-- name: Creativity
-  level: 80
-- name: Persuasion
-  level: 65
+    projects:
+        - name: Cool Project A
+          timeperiod: 08.2017 - 11.2017
+          client: Client 1
+          role: Software Engineer
+          technologies: React
+          description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        - name: Cool Project B
+          timeperiod: 07.2017 - 08.2017
+          client: Client 2
+          role: Software Engineer
+          technologies: Angular
+          description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        - name: Cool Project C
+          timeperiod: 07.2017 - 08.2017
+          client: Client 2
+          role: Software Engineer
+          technologies: Angular
+          description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        - name: Cool Project D
+          timeperiod: 07.2017 - 08.2017
+          client: Client 2
+          role: Software Engineer
+          technologies: Angular
+          description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        - name: Cool Project E
+          timeperiod: 07.2017 - 08.2017
+          client: Client 2
+          role: Software Engineer
+          technologies: Angular
+          description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
-# languages level goes 0 to 6
-languages:
-    - name: Italian
-      level: 6
-    - name: English
-      level: 5
-    - name: French
-      level: 4
-    - name: Spanish
-      level: 4
-    - name: German
-      level: 3
+    hobbies:
+        - name: Transsiberian Dream 2018
+          iconClass: fa fa-train
 
-knowledge: |
-    Technologies: JavaScript, TypeScript, React, Angular, Docker, Java, Python, Kotlin, Vue.js, Blockchain, COBOL
+        - name: Camino de Santiago 2017
+          iconClass: fa fa-hiking
 
-projects:
-- name: Clientis Portal
-  technologies: React with TypeScript, Angular
-  description: Client Side development of a Web Portal and its backoffice (Inbox, Document Storage)
-- name: ICO Mobile App
-  technologies: React Native, Android Studio, Blockchain
-  description: Development of the Video Call part inside the App and the contract in Solidity for the Ethereum Blockchain
-- name: SmartConnect
-  technologies: Jive, JavaScript, HTML5
-  description: Implementation of new functionalities for a Collaborative Platform
-- name: Auto-tuning of an Humanoid Model
-  technologies: EyesWeb, C++
-  description: Thesis project where I implemented a block to auto-tune a Spring-Mass-Dumper Humanoid Model using real dancing movements recorded by a Motion Capture System
+        - name: Basket, Volley, Football
+          iconClass: fa fa-running
 
-
-hobbies:
-- name: Transsiberian Dream 2018
-  iconClass: fa fa-train
-
-- name: Camino de Santiago 2017
-  iconClass: fa fa-hiking
-
-- name: Basket, Volley, Football
-  iconClass: fa fa-running
-
-contact:
-  email: andreamaga4@gmail.com
-  phone: 0041 76 372 14 44
-  city: Zurich, Switzerland
-  nationality: Italian Passport
-  github: harrier91
-# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
-lang: en
-`
+    contact:
+        email: andrea@test.test
+        phone: 0039 111 111 1111
+        city: Zurich, Switzerland
+        nationality: Italian
+    # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
+    lang: en
+        `

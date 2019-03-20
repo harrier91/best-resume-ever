@@ -32,6 +32,7 @@
             h3 {
                 padding-right: 1rem;
             }
+
             .block-element {
                 padding-right: 1rem;
             }
@@ -128,7 +129,7 @@
         }
 
         .half {
-            width: 35%;
+            width: 40%;
             border: none;
             padding: 0;
         }
@@ -202,5 +203,19 @@
     .knowledge-block {
         font-size: 1rem;
         padding-top: 1rem;
+        white-space: pre-line;
     }
 }
+
+@media print {
+    @page resume1 {
+        margin: 1cm 0;
+    }
+    #resume1 {
+        page: resume1;
+    }
+    .block-element {
+        page-break-inside: avoid;
+    }
+}
+

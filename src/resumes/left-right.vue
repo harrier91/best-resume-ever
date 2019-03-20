@@ -5,19 +5,19 @@
         </div>
         <div class="row image center">
             <div class="left half">
-                <div class="contact">
-                    <span>{{person.contact.email}}
+                <div class="row contact">
+                    <span class="col-12">{{person.contact.email}}
                         <i class="fa fa-envelope" aria-hidden="true"></i></span>
-                    <span>{{person.contact.phone}}
+                    <span class="col-12">{{person.contact.phone}}
                         <i class="fa fa-phone" aria-hidden="true"></i></span>
                 </div>
             </div>
             <div class="img"></div>
             <div class="right half">
-                <div class="contact">
-                    <span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                <div class="row contact">
+                    <span class="col-12"><i class="fa fa-map-marker" aria-hidden="true"></i>
                     {{person.contact.city}}</span>
-                    <span><i class="fa fa-globe" aria-hidden="true"></i>
+                    <span class="col-12"><i class="fa fa-passport" aria-hidden="true"></i>
                     {{person.contact.nationality}}</span>
                 </div>
             </div>
@@ -27,9 +27,18 @@
                 <h3>{{ lang.education }}</h3>
                 <div class="block-element" v-for="education in person.education" :key="education.degree">
                     <span class="small float-left"> {{education.timeperiod}}</span>
+                    <span class="small">{{education.university}}</span>
                     <span class="italic">{{education.degree}}</span>
                     <span class="bold">{{education.major}}</span>
-                    <span class="university">{{education.university}}</span>
+                </div>
+            </div>
+            <div class="block">
+                <h3>{{ lang.training }}</h3>
+                <div class="block-element" v-for="training in person.training" :key="training.name">
+                    <span class="small float-left"> {{training.timeperiod}}</span>
+                    <span class="small">{{training.location}}</span>
+                    <span class="bold">{{training.name}}</span>
+                    <span class="description">{{training.description}}</span>
                 </div>
             </div>
             <div class="block">
@@ -53,6 +62,7 @@
                 <h3>{{ lang.experience }}</h3>
                 <div class="block-element" v-for="experience in person.experience" :key="experience.company">
                     <span class="small float-right"> {{experience.timeperiod}}</span>
+                    <span class="small"> {{experience.location}} </span><br/>
                     <span class="italic"> {{experience.position}} </span><br/>
                     <span class="bold"> {{experience.company}} </span>
                     <span class="description"> {{experience.description}} </span>

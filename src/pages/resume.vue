@@ -1,15 +1,16 @@
 <template>
     <div class="page-wrapper">
-        <div class="page" :id="$route.params.resumeid">
+        <div class="page" :id="$route.params.resumeid" v-if="person">
             <component
                 :is="$route.params.resumeid"
                 :person="person"
                 :lang="lang"
-                :contactLinks="contactLinks"
             ></component>
         </div>
         <div class="section-edit">
+            <input type="file" ref="file" v-on:change="importYAML()">
             <button v-on:click="print">Print Resume</button>
+            <button v-on:click="exportYAML(person)" v-model="person">Export YAML</button>
             <FormCreator :object="person"></FormCreator>
         </div>
     </div>
@@ -17,8 +18,12 @@
 
 <script>
     import Vue from 'vue';
-    import { getVueData } from './options';
+    import yaml from 'js-yaml';
     import '../resumes/resumes';
+    import {
+        terms
+    } from '../terms';
+    import { PERSON } from '../../resume/data.yml';
 
     const FormCreator = {
         name: 'FormCreator',
@@ -29,13 +34,14 @@
         template: `
             <div>
                 <div class="row" v-for="field in Object.keys(object)">
-                    <label
+                    <div
                         v-if="typeof object[field] !== 'object' || !object[field]"
                         class="col-12"
                     >
-                        {{field}}
-                        <input v-model="object[field]">
-                    </label>
+                        <input
+                            v-model="object[field]"
+                            :placeholder="field">
+                    </div>
                     <div
                         v-else
                         class="col-12"
@@ -54,9 +60,45 @@
             FormCreator: FormCreator
         },
         data() {
-            return getVueData();
+            return {
+                person: '',
+                terms: terms
+            };
+        },
+        created() {
+            this.importYAML();
         },
         methods: {
+            importYAML: function() {
+                if(this.$refs.file) {
+                    this.file = this.$refs.file.files[0];
+
+                    const r = new FileReader();
+                    r.that = this;
+                    r.onload = function(e) {
+                        const contents = e.target.result;
+                        this.that.person = yaml.safeLoad(contents, 'utf8');
+                    };
+                    r.readAsText(this.file);
+                } else {
+                    this.person = yaml.safeLoad(PERSON);
+                }
+            },
+            exportYAML: (person) => {
+                const a = window.document.createElement('a');
+                document.body.appendChild(a);
+                a.style = 'display: none';
+
+                const yamlFile = yaml.safeDump(person);
+                const blob = new Blob([yamlFile.toString()], { type: 'application/x-yaml' });
+                const url = URL.createObjectURL(blob);
+
+                a.href = url;
+                a.download = 'data.yml';
+                a.click();
+
+                window.URL.revokeObjectURL(url);
+            },
             print: () => {
                 window.print();
             }
@@ -75,37 +117,7 @@
                     });
 
                 return useLang;
-            },
-
-            contactLinks() {
-                const links = {};
-
-                if (this.person.contact.github) {
-                    links.github = `https://github.com/${this.person.contact.github}`;
-                }
-
-                if (this.person.contact.codefights) {
-                    links.codefights = `https://codefights.com/profile/${this.person.contact.codefights}`;
-                }
-
-                if (this.person.contact.medium) {
-                    links.medium = `https://medium.com/@${this.person.contact.medium}`;
-                }
-
-                if (this.person.contact.email) {
-                    links.email = `mailto:${this.person.contact.email}`;
-                }
-
-                if (this.person.contact.linkedin) {
-                    links.linkedin = `https://linkedin.com/in/${this.person.contact.linkedin}`;
-                }
-
-                if (this.person.contact.phone) {
-                    links.phone = `tel:${this.person.contact.phone}`;
-                }
-
-                return links;
-            },
+            }
         }
     });
 </script>

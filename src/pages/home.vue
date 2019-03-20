@@ -29,12 +29,13 @@
                   'left-right',
                   'oblique',
                   'side-bar',
-                  'purple',
+                  'ti8m',
                   'side-bar-rtl',
                   'left-right-rtl',
                   'creative',
                   'cool'
-              ]
+              ],
+              file: ''
           };
       },
       methods: {
